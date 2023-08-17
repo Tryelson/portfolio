@@ -8,8 +8,9 @@ import Header from "./components/Header";
 export default function Home() {
 
 	return (
-		<>
+		<Container p='0' w='calc(100% - 40px)' maxW={'1200px'} mt='100px'>
+			<Header />
 			Building Content...
-		</>
+		</Container>
 	)
 }

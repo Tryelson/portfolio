@@ -1,5 +1,3 @@
-'use client';
-
 import { Container } from '@chakra-ui/react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -24,10 +22,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
         <Providers>
-          <Container p='0' w='calc(100% - 40px)' maxW={'1200px'} mt='100px'>
-            <Header />
-            {children}
-          </Container>
+          {children}
         </Providers>
       </body>
     </html>
