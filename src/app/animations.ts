@@ -13,3 +13,10 @@ const headerParagraphAnimation = keyframes`
 `
 
 export const paragraphAnimation = `${headerParagraphAnimation} 0.7s ease-in-out`
+
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`
+
+export const fadeInAnimation = `${fadeIn} 0.7s ease-in-out`
