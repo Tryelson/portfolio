@@ -6,8 +6,8 @@ import { fadeInAnimation, logo } from "../animations";
 export default function Header(){
 
     return (
-        <Box as='header' display='flex' justifyContent={'space-between'} height='800px' position={'fixed'}>
-				<Flex display={'flex'} direction='column' justify='space-between'>
+        <Box as='header' w='100%' height={'100%'}>
+				<Flex display={'flex'} direction='column' justify='space-between' height={'100%'}>
 					<Box>
 						<Box display='flex' alignItems={'center'} gap='20px'>
 							<Box position={'relative'}>
@@ -22,7 +22,7 @@ export default function Header(){
 							</Box>
 
 							<Box overflow={'hidden'} ml='-20px'>
-								<Heading as='h1' ml='20px' fontSize={'3rem'} animation={logo}>Tryelson Marques</Heading>
+								<Heading as='h1' ml='20px' fontSize={{base: '25px', xl: '48px', lg: '35px', sm: '35px'}} animation={logo}>Tryelson Marques</Heading>
 							</Box>
 						</Box>
 
