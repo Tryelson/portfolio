@@ -59,7 +59,7 @@ export default function Experiences(){
             </Link>
 
             <Box mt='50px' onMouseEnter={() => setHoverResume(true)} onMouseLeave={() => setHoverResume(false)} w='fit-content'>
-                <Link as={NextLink} href='/resume.pdf' target='_blank' position={'relative'} w='fit-content' display={'flex'} alignItems='center' gap='10px' color={`${hoverResume ? '#AADDFF' : ''}`} _hover={{textDecoration: 'none'}} _after={{content: `''`, transition: 'all 0.2s ease-in-out', position: 'absolute', bottom: '-2px', left: '0', width: `${hoverResume ? '85%' : '0%'}`, height: '2px', backgroundColor: '#AADDFF'}}>
+                <Link as={NextLink} href='/Resume.pdf' target='_blank' position={'relative'} w='fit-content' display={'flex'} alignItems='center' gap='10px' color={`${hoverResume ? '#AADDFF' : ''}`} _hover={{textDecoration: 'none'}} _after={{content: `''`, transition: 'all 0.2s ease-in-out', position: 'absolute', bottom: '-2px', left: '0', width: `${hoverResume ? '85%' : '0%'}`, height: '2px', backgroundColor: '#AADDFF'}}>
                     View full Résumé 
                     <ArrowForwardIcon transition='transform 0.3s ease-in-out' transform={`${hoverResume ? 'translateX(5px)' : ''}`} />
                 </Link>
