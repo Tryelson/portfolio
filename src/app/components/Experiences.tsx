@@ -17,8 +17,8 @@ export default function Experiences(){
         <>
             <Box overflow='hidden' mb='100px'>
                 <Text as='p' color={'#94A3B8'} animation={paragraphAnimation}>
-                    I'm a front-end engineer specializing in building exceptional digital experience. Currently, I'm focused on building <Text as='span' color='white'>accessible, scalable, human-centered</Text> products at <Link href='https://www.hivegroup.com.br' target={'_blank'} color='#ADF' textDecoration={'underline'}>HiveGroup</Link>, focusing on <Text as='span' color='white'>user experience.</Text> Acting in the construction and maintenance of project management systems, Landing Pages and websites.<br/><br/>
-                    My main focus these days is building products for our clients at <Link href='https://www.hivegroup.com.br' target={'_blank'} color='#ADF' textDecoration={'underline'}>HiveGroup</Link>. In my free time I like to play video games, hanging out with my wife and build personal projects.
+                    I'm a front-end engineer specializing in creating exceptional digital experience. Currently, I'm dedicated to constructing <Text as='span' color='white'>accessible, scalable, human-centered</Text> products at <Link href='https://www.hivegroup.com.br' target={'_blank'} color='#ADF' textDecoration={'underline'}>HiveGroup</Link> with a focus on <Text as='span' color='white'>user experience.</Text> My work involves the development and maintenance of project management systems, Landing Pages and websites.<br/><br/>
+                    My main focus these days is building products for our clients at <Link href='https://www.hivegroup.com.br' target={'_blank'} color='#ADF' textDecoration={'underline'}>HiveGroup</Link>. In my free time, I like to play video games, hang out with my wife and build personal projects.
                 </Text>
             </Box>
 
