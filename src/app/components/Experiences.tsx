@@ -14,15 +14,15 @@ export default function Experiences(){
     const [hoverResume, setHoverResume] = useState(false)
 
     return (
-        <>
+        <Box animation={paragraphAnimation}>
             <Box overflow='hidden' mb='100px'>
-                <Text as='p' color={'#94A3B8'} animation={paragraphAnimation}>
+                <Text as='p' color={'#94A3B8'}>
                     I'm a front-end engineer specializing in creating exceptional digital experience. Currently, I'm dedicated to constructing <Text as='span' color='white'>accessible, scalable, human-centered</Text> products at <Link href='https://www.hivegroup.com.br' target={'_blank'} color='#ADF' textDecoration={'underline'}>HiveGroup</Link> with a focus on <Text as='span' color='white'>user experience.</Text> My work involves the development and maintenance of project management systems, Landing Pages and websites.<br/><br/>
                     My main focus these days is building products for our clients at <Link href='https://www.hivegroup.com.br' target={'_blank'} color='#ADF' textDecoration={'underline'}>HiveGroup</Link>. In my free time, I like to play video games, hang out with my wife and build personal projects.
                 </Text>
             </Box>
 
-            <Link animation={paragraphAnimation} display='flex' href="https://www.hivegroup.com.br" target={'_blank'} w='100%' onMouseOver={() => setHoverCardAnimation(true)} onMouseLeave={() => setHoverCardAnimation(false)} ml={{base: '0px', lg: '-20px'}} transition={'all 0.3s ease-in-out'} borderRadius={'8px'} padding='20px' backgroundColor={{base: 'rgb(100 116 139 / 14%)', lg: 'unset'}} _hover={{backgroundColor: 'rgb(100 116 139 / 14%)', textDecoration: 'none', boxShadow: '0 5px 16px 1px rgb(0 0 0 / 30%)'}}>
+            <Link display='flex' href="https://www.hivegroup.com.br" target={'_blank'} w='100%' onMouseOver={() => setHoverCardAnimation(true)} onMouseLeave={() => setHoverCardAnimation(false)} ml={{base: '0px', lg: '-20px'}} transition={'all 0.3s ease-in-out'} borderRadius={'8px'} padding='20px' backgroundColor={{base: 'rgb(100 116 139 / 14%)', lg: 'unset'}} _hover={{backgroundColor: 'rgb(100 116 139 / 14%)', textDecoration: 'none', boxShadow: '0 5px 16px 1px rgb(0 0 0 / 30%)'}}>
                 <Flex gap='40px' direction={{base: 'column', lg: 'row'}}>
                     <Box w='fit-content'>
                         <Text color={'#64748b'} whiteSpace='nowrap' fontSize='0.875rem' textTransform={'uppercase'}>2021 - Present</Text>
@@ -64,6 +64,6 @@ export default function Experiences(){
                     <ArrowForwardIcon transition='transform 0.3s ease-in-out' transform={`${hoverResume ? 'translateX(5px)' : ''}`} />
                 </Link>
             </Box>
-        </>
+        </Box>
     )
 }

@@ -1,5 +1,4 @@
-import { Heading, Box, Image, Text, Link, List, ListItem, Flex } from "@chakra-ui/react";
-import { useState } from "react";
+import { Heading, Box, Image, Link, List, ListItem, Flex } from "@chakra-ui/react";
 import { BsGithub, BsLinkedin, BsInstagram } from 'react-icons/bs'
 import { fadeInAnimation, logo } from "../animations";
 
