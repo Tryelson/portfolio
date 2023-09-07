@@ -13,6 +13,13 @@ export function Providers({
   }) {
 
     const theme = extendTheme({
+        styles: {
+            global: {
+                body: {
+                    background: "linear-gradient(0deg, #131b27 0%, #19202f 60%)",
+                }
+            },
+        },
         fonts: {
           heading: `'Inter'`,
           body: `'Inter'`,

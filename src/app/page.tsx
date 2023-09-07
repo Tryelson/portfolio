@@ -9,12 +9,12 @@ export default function Home() {
 
 	return (
 		<Container p='0' w='calc(100% - 40px)' maxW={'1200px'}>
-			<Flex justify={'space-between'} direction={{base: 'column', lg: 'row'}} gap='10px'>
-				<Box py={{base: '40px', lg: '100px'}}  position={{base: 'relative', lg: 'sticky'}} top='0' w='100%' maxW='520px' maxH='100vh'>
+			<Flex justify={'space-between'} align={{base: 'center', lg: 'unset'}} direction={{base: 'column', lg: 'row'}} gap='10px'>
+				<Box py={{base: '40px', lg: '100px'}}  position={{base: 'relative', lg: 'sticky'}} top='0' w='100%' maxW={{base: '100%', lg: '520px'}} maxH='100vh'>
 					<Header />
 				</Box>
 
-				<Box w='100%' maxW='600px' mb='100px' mt={{base: '0', lg: '100px'}}>
+				<Box w='100%' maxW={{base: '100%', lg: '600px'}} mb='100px' mt={{base: '0', lg: '100px'}}>
 					<Experiences />
 					<Projects />
 
