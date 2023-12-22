@@ -4,8 +4,9 @@ import { ArrowUpIcon } from "@chakra-ui/icons";
 import { Box, Text, Image, Flex, Heading, Link, Badge } from "@chakra-ui/react";
 import { useState } from "react";
 import { paragraphAnimation } from "../animations";
-import { skillsTablePro, skillsTodoApp } from "../utils/skills";
+import { skillsPhoneBookApp, skillsTablePro, skillsTodoApp } from "../utils/skills";
 import BadgeSkillsList from "./BadgeSkillsList";
+import Project from "./Project";
 
 export default function Projects(){
 
@@ -15,7 +16,30 @@ export default function Projects(){
         <Box mt='100px' animation={paragraphAnimation} display='flex' flexDir={'column'} gap='20px'>
             <Heading as={'h4'} mb='30px' color={'#aaddff'} textTransform={'uppercase'} fontSize={'20px'}>Projects</Heading>
 
-            <Box onMouseOver={() => setHoverCardAnimation(true)} onMouseLeave={() => setHoverCardAnimation(false)} p={'10px'} borderRadius={'8px'}  ml={{base: '0px', lg: '-20px'}} padding='20px' backgroundColor={{base: 'rgb(100 116 139 / 14%)', lg: 'unset'}} transition={'all 0.3s ease-in-out'} _hover={{backgroundColor: 'rgb(100 116 139 / 14%)', boxShadow: '0 5px 16px 1px rgb(0 0 0 / 30%)'}}>
+            <Project>
+                <Link href="https://phone-book-tryelson.vercel.app/" target="_blank" _hover={{textDecoration: 'none'}} display='flex' flexDirection={{base: 'column', lg: 'row'}} gap={'20px'}>
+                    <Box w='100%' maxW={{base: '100%', lg: '180px'}}>
+                        <Image minW={{base: '100%', lg: '180px'}} maxH={'400px'} src='/phone-book-app.png' alt='Phone book Screenshot' />
+                    </Box>
+
+                    <Flex direction={'column'} gap='10px'>
+                        <Heading display={'flex'} transition={'all 0.3s ease-in-out'} color={`${hoverCardAnimation ? '#AADDFF' : ''}`} alignItems='center' as='h4' fontSize='17px' fontWeight={'light'}>
+                            Phone Book app
+                            <Box transition={'transform 0.3s ease-in-out'} transform={`${hoverCardAnimation ? 'translate(2px, -2px)' : ''}`}>
+                                <ArrowUpIcon  ml='8px' mt='-5px' transition={'transform 0.3s ease-in-out'} transform={'rotate(45deg)'} />
+                            </Box>
+                        </Heading>
+
+                        <Text color={'#94A3B8'}>This is a fullstack application, I've made both frontend and backend sides. In this mini app, you can use all the basics CRUD operations, such as, create a new contact, read contacts, edit an existing contact and delete.</Text>
+
+                        <Flex gap={'10px'}>
+                            <BadgeSkillsList skills={skillsPhoneBookApp} />
+                        </Flex>
+                    </Flex>
+                </Link>
+            </Project>
+
+            <Project>
                 <Link href="https://todo-app-tryelson.vercel.app" target="_blank" _hover={{textDecoration: 'none'}} display='flex' flexDirection={{base: 'column', lg: 'row'}} gap={'20px'}>
                     <Box w='100%' maxW={{base: '100%', lg: '180px'}}>
                         <Image minW={{base: '100%', lg: '180px'}} maxH={'400px'} src='/todo-app.png' alt='Todo App Screenshot' />
@@ -36,9 +60,9 @@ export default function Projects(){
                         </Flex>
                     </Flex>
                 </Link>
-            </Box>
+            </Project>
 
-            <Box onMouseOver={() => setHoverCardAnimation(true)} onMouseLeave={() => setHoverCardAnimation(false)} p={'10px'} borderRadius={'8px'}  ml={{base: '0px', lg: '-20px'}} padding='20px' backgroundColor={{base: 'rgb(100 116 139 / 14%)', lg: 'unset'}} transition={'all 0.3s ease-in-out'} _hover={{backgroundColor: 'rgb(100 116 139 / 14%)', boxShadow: '0 5px 16px 1px rgb(0 0 0 / 30%)'}}>
+            <Project>
                 <Link href="https://table-pro-tryelson.vercel.app" target="_blank" _hover={{textDecoration: 'none'}} display='flex' flexDirection={{base: 'column', lg: 'row'}} gap={'20px'}>
                     <Box w='100%' maxW={{base: '100%', lg: '180px'}}>
                         <Image minW={{base: '100%', lg: '180px'}} maxH={'400px'} src='/table-pro.png' alt='Todo Pro Screenshot' />
@@ -59,7 +83,7 @@ export default function Projects(){
                         </Flex>
                     </Flex>
                 </Link>
-            </Box>
+            </Project>
         </Box>
     )
 }
