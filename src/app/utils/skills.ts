@@ -61,6 +61,34 @@ export const skills = [
     },
 ]
 
+export const skillsPhoneBookApp = [
+    {
+        name: 'React',
+        color: '#AADDFF',
+        fontColor: ''
+    },
+    {
+        name: 'Typescript',
+        color: '#4587ea',
+        fontColor: ''
+    },
+    {
+        name: 'CSS',
+        color: '#07B0CE',
+        fontColor: ''
+    },
+    {
+        name: 'MongoDB',
+        color: '#023430',
+        fontColor: ''
+    },
+    {
+        name: 'NodeJS',
+        color: '#7CB73F',
+        fontColor: ''
+    },
+]
+
 export const skillsTodoApp = [
     {
         name: 'Nuxt',
