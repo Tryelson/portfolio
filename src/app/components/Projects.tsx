@@ -32,7 +32,7 @@ export default function Projects(){
 
                         <Text color={'#94A3B8'}>This is a fullstack application, I've made both frontend and backend sides. In this mini app, you can use all the basics CRUD operations, such as, create a new contact, read contacts, edit an existing contact and delete.</Text>
 
-                        <Flex gap={'10px'}>
+                        <Flex gap={'10px'} flexWrap={'wrap'}>
                             <BadgeSkillsList skills={skillsPhoneBookApp} />
                         </Flex>
                     </Flex>
@@ -55,7 +55,7 @@ export default function Projects(){
 
                         <Text color={'#94A3B8'}>A frontend application simulating a project management system. In this Todo App, you can easily drag and drop your tasks to change their status type. You can create, delete, and edit tasks. Try it now!</Text>
 
-                        <Flex gap={'10px'}>
+                        <Flex gap={'10px'} flexWrap={'wrap'}>
                             <BadgeSkillsList skills={skillsTodoApp} />
                         </Flex>
                     </Flex>
@@ -78,7 +78,7 @@ export default function Projects(){
 
                         <Text color={'#94A3B8'}>I Built a table just for upload files, using Firebase to the storage and Next.js with Typescript for the frontend. Limited up to 5, you can create or delete a file.</Text>
 
-                        <Flex gap={'10px'}>
+                        <Flex gap={'10px'} flexWrap={'wrap'}>
                             <BadgeSkillsList skills={skillsTablePro} />
                         </Flex>
                     </Flex>
