@@ -1,8 +1,14 @@
 import { Heading, Box, Image, Link, List, ListItem, Flex } from "@chakra-ui/react";
 import { BsGithub, BsLinkedin, BsInstagram } from 'react-icons/bs'
 import { fadeInAnimation, logo } from "../animations";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { useState } from "react";
+import { CgFileDocument } from "react-icons/cg";
+import NextLink from 'next/link'
 
 export default function Header(){
+
+    const [hoverResume, setHoverResume] = useState(false)
 
     return (
         <Box as='header' w='100%' height={'100%'}>
@@ -10,9 +16,9 @@ export default function Header(){
 					<Box>
 						<Box display='flex' alignItems={'center'} gap='20px'>
 							<Box position={'relative'}>
-								<Box transition={'all 0.2s ease-in-out'} position='relative' zIndex={'20'} boxShadow={'0 0 10px #375c7457'} _hover={{boxShadow: '0 0 10px #375c74'}} borderRadius='5px'>
+								<Box transition={'all 0.2s ease-in-out'} position='relative' zIndex={'20'} boxShadow={'0 0 10px #375c7457'} _hover={{boxShadow: '0 0 10px #375c74'}} borderRadius='100%' overflow={'hidden'}>
 									<Image 
-										src={'/logo-rounded.png'} 
+										src={'/profile.jpg'} 
 										w='70px' 
 										h='70px'
 										position='relative'
@@ -26,7 +32,15 @@ export default function Header(){
 						</Box>
 
 						<Box overflow={'hidden'}>
-							<Heading as='h4' animation={logo} color={'#94A3B8'} fontSize={'1.25rem'} fontWeight='light' mt='10px' mb='20px'>Building digital experiences for the web since 2021.</Heading>
+							<Heading as='h4' animation={logo} color={'#94A3B8'} fontSize={'1.25rem'} fontWeight='light' mt='10px' mb='20px'>Building digital experiences.</Heading>
+						</Box>
+
+						<Box mt='10px' onMouseEnter={() => setHoverResume(true)} onMouseLeave={() => setHoverResume(false)} w='fit-content'>
+							<Link as={NextLink} href='/Resume-EN.pdf' target='_blank' position={'relative'} w='fit-content' display={'flex'} alignItems='center' gap='10px' color={`${hoverResume ? '#AADDFF' : ''}`} _hover={{textDecoration: 'none'}} _after={{content: `''`, transition: 'all 0.2s ease-in-out', position: 'absolute', bottom: '-2px', left: '0', width: `${hoverResume ? '85%' : '0%'}`, height: '2px', backgroundColor: '#AADDFF'}}>
+								<CgFileDocument />
+								View full Résumé 
+								<ArrowForwardIcon transition='transform 0.3s ease-in-out' transform={`${hoverResume ? 'translateX(5px)' : ''}`} />
+							</Link>
 						</Box>
 					</Box>
 

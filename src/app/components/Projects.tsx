@@ -4,7 +4,7 @@ import { ArrowUpIcon } from "@chakra-ui/icons";
 import { Box, Text, Image, Flex, Heading, Link, Badge } from "@chakra-ui/react";
 import { useState } from "react";
 import { paragraphAnimation } from "../animations";
-import { skillsPhoneBookApp, skillsTablePro, skillsTodoApp } from "../utils/skills";
+import { skillsPhoneBookApp, skillsTablePro, skillsTodoApp, skillsWeMovies } from "../utils/skills";
 import BadgeSkillsList from "./BadgeSkillsList";
 import Project from "./Project";
 
@@ -15,6 +15,30 @@ export default function Projects(){
     return (
         <Box mt='100px' animation={paragraphAnimation} display='flex' flexDir={'column'} gap='20px'>
             <Heading as={'h4'} mb='30px' color={'#aaddff'} textTransform={'uppercase'} fontSize={'20px'}>Projects</Heading>
+
+            <Project>
+                <Link href="https://wemovies-tryelsonmarques.vercel.app/" target="_blank" _hover={{textDecoration: 'none'}} display='flex' flexDirection={{base: 'column', lg: 'row'}} gap={'20px'}>
+                    <Box w='100%' maxW={{base: '100%', lg: '180px'}}>
+                        <Image minW={{base: '100%', lg: '180px'}} maxH={'400px'} src='/wemovies.png' alt='We movies screenshot' />
+                    </Box>
+
+                    <Flex direction={'column'} gap='10px'>
+                        <Heading display={'flex'} transition={'all 0.3s ease-in-out'} color={`${hoverCardAnimation ? '#AADDFF' : ''}`} alignItems='center' as='h4' fontSize='17px' fontWeight={'light'}>
+                            We Movies
+
+                            <Box transition={'transform 0.3s ease-in-out'} transform={`${hoverCardAnimation ? 'translate(2px, -2px)' : ''}`}>
+                                <ArrowUpIcon  ml='8px' mt='-5px' transition={'transform 0.3s ease-in-out'} transform={'rotate(45deg)'} />
+                            </Box>
+                        </Heading>
+
+                        <Text color={'#94A3B8'}>This is a small application I created for a test at WeFit. The purpose is simply to simulate a marketplace where the user can choose and buy movies.</Text>
+
+                        <Flex gap={'10px'} flexWrap={'wrap'}>
+                            <BadgeSkillsList skills={skillsWeMovies} />
+                        </Flex>
+                    </Flex>
+                </Link>
+            </Project>
 
             <Project>
                 <Link href="https://phone-book-tryelson.vercel.app/" target="_blank" _hover={{textDecoration: 'none'}} display='flex' flexDirection={{base: 'column', lg: 'row'}} gap={'20px'}>
@@ -39,7 +63,7 @@ export default function Projects(){
                 </Link>
             </Project>
 
-            <Project>
+            {/* <Project>
                 <Link href="https://todo-app-tryelson.vercel.app" target="_blank" _hover={{textDecoration: 'none'}} display='flex' flexDirection={{base: 'column', lg: 'row'}} gap={'20px'}>
                     <Box w='100%' maxW={{base: '100%', lg: '180px'}}>
                         <Image minW={{base: '100%', lg: '180px'}} maxH={'400px'} src='/todo-app.png' alt='Todo App Screenshot' />
@@ -60,7 +84,7 @@ export default function Projects(){
                         </Flex>
                     </Flex>
                 </Link>
-            </Project>
+            </Project> */}
 
             <Project>
                 <Link href="https://table-pro-tryelson.vercel.app" target="_blank" _hover={{textDecoration: 'none'}} display='flex' flexDirection={{base: 'column', lg: 'row'}} gap={'20px'}>

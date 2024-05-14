@@ -61,6 +61,77 @@ export const skills = [
     },
 ]
 
+export const skillsWeMovies = [
+    {
+        name: 'React',
+        color: '#AADDFF',
+        fontColor: ''
+    },
+    {
+        name: 'Next.JS',
+        color: 'black',
+        fontColor: 'white'
+    },
+    {
+        name: 'Typescript',
+        color: '#4587ea',
+        fontColor: ''
+    },
+    {
+        name: 'HTML/CSS',
+        color: '#f4794f',
+        fontColor: ''
+    },
+    {
+        name: 'Styled Components',
+        color: '#07B0CE',
+        fontColor: ''
+    },
+]
+
+export const skillsSume = [
+    {
+        name: 'Next.JS',
+        color: 'black',
+        fontColor: 'white'
+    },
+    {
+        name: 'Javascript',
+        color: '#ffff48',
+        fontColor: ''
+    },
+    {
+        name: 'Typescript',
+        color: '#4587ea',
+        fontColor: ''
+    },
+    {
+        name: 'HTML/CSS',
+        color: '#f4794f',
+        fontColor: ''
+    },
+    {
+        name: 'Chakra UI',
+        color: '#5BC9C8',
+        fontColor: ''
+    },
+    {
+        name: 'Tailwind',
+        color: '#07B0CE',
+        fontColor: ''
+    },
+    {
+        name: 'Leadership',
+        color: '#f4794f',
+        fontColor: ''
+    },
+    {
+        name: 'Communication',
+        color: '#ffff48',
+        fontColor: ''
+    },
+]
+
 export const skillsPhoneBookApp = [
     {
         name: 'React',
