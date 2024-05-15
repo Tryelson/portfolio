@@ -4,7 +4,8 @@ import "@fontsource/inter";
 import '@fontsource/inter/400.css'
 
 import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
+import { Box, ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
+import { LinkBaseStyle } from "./utils/baseStyle";
 
 export function Providers({ 
     children 
@@ -16,7 +17,7 @@ export function Providers({
         styles: {
             global: {
                 body: {
-                    background: "linear-gradient(0deg, #131b27 0%, #19202f 60%)",
+                    background: "",
                 }
             },
         },
@@ -24,13 +25,18 @@ export function Providers({
           heading: `'Inter'`,
           body: `'Inter'`,
         },
+        components: {
+            Link: LinkBaseStyle
+        }
     })
 
     return (
         <CacheProvider>
             <ChakraProvider theme={theme}>
                 <ColorModeScript initialColorMode='dark' />
-                { children }
+                <Box className='background-effect'>
+                    { children }
+                </Box>
             </ChakraProvider>
         </CacheProvider>
     )
