@@ -2,6 +2,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /* cursor: none; */
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .background-effect::before {
@@ -35,6 +40,22 @@
   animation: arrowSliding 2.3s infinite ease-in-out;
 }
 
+.black-animation {
+  position: absolute;
+  pointer-events: none;
+  opacity: 1;
+
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  z-index: 9999;
+
+  animation-delay: 1s;
+  animation-duration: 0.5s;
+  animation-name: blackAnimation;
+  animation-fill-mode: forwards;
+}
+
 @keyframes arrowSliding {
   0% {
     transform: translateX(0px);
@@ -45,4 +66,18 @@
   100% {
     transform: translateX(0px);
   }
+}
+
+@keyframes blackAnimation {
+  0% {
+    opacity: 1;
+    height: 100vh;
+  }
+  100% {
+    height: 100vh;
+  }
+}
+
+@keyframes fadeOut {
+  
 }
