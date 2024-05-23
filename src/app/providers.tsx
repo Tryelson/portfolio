@@ -4,7 +4,7 @@ import "@fontsource/inter";
 import '@fontsource/inter/400.css'
 
 import { CacheProvider } from '@chakra-ui/next-js'
-import { Box, ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react'
+import { Box, ChakraProvider, ColorModeScript, Flex, Spinner, extendTheme } from '@chakra-ui/react'
 import { LinkBaseStyle } from "./utils/baseStyle";
 
 export function Providers({ 
@@ -34,6 +34,12 @@ export function Providers({
         <CacheProvider>
             <ChakraProvider theme={theme}>
                 <ColorModeScript initialColorMode='dark' />
+                {/* <Flex className='black-animation' alignItems={'center'} justifyContent={'center'} overflow='hidden'>
+                    <Box animation={'fadeIn 0.3s ease-in-out'}>
+                        <Spinner w={'100px'} h='100px' />
+                    </Box>
+                </Flex> */}
+
                 <Box className='background-effect'>
                     { children }
                 </Box>
