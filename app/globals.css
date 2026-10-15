@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-bricolage);
+}
+
+@theme {
+  --color-ink: #06080c;
+  --color-surface: #0c1016;
+  --color-surface-2: #121821;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-fg: #e8eef3;
+  --color-muted: #8b98a5;
+  --color-brand: #2dd4bf;
+  --color-brand-2: #38bdf8;
+  --color-brand-3: #a78bfa;
+
+  --animate-blob-a: blob-a 22s ease-in-out infinite;
+  --animate-blob-b: blob-b 26s ease-in-out infinite;
+  --animate-blob-c: blob-c 30s ease-in-out infinite;
+  --animate-shine: shine 6s linear infinite;
+
+  @keyframes blob-a {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(18vw, 12vh) scale(1.15); }
+  }
+  @keyframes blob-b {
+    0%, 100% { transform: translate(0, 0) scale(1.1); }
+    50% { transform: translate(-16vw, 18vh) scale(0.9); }
+  }
+  @keyframes blob-c {
+    0%, 100% { transform: translate(0, 0) scale(0.95); }
+    50% { transform: translate(10vw, -14vh) scale(1.2); }
+  }
+  @keyframes shine {
+    to { background-position: 200% center; }
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes ring-rotate {
+  to { --angle: 360deg; }
+}
+
+.ring-spin {
+  background: conic-gradient(from var(--angle), var(--color-brand), var(--color-brand-2), var(--color-brand-3), var(--color-brand));
+  animation: ring-rotate 6s linear infinite;
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+@keyframes flow {
+  from { offset-distance: 0%; }
+  to { offset-distance: 100%; }
+}
+
+html {
+  background-color: var(--color-ink);
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  color: var(--color-fg);
+}
+
+::selection {
+  background: rgb(45 212 191 / 0.3);
+  color: #fff;
+}
+
+.text-gradient {
+  background-image: linear-gradient(90deg, var(--color-brand), var(--color-brand-2), var(--color-brand-3), var(--color-brand));
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
