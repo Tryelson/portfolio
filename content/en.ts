@@ -16,7 +16,7 @@ export const en: Dictionary = {
       "I build fast, reliable interfaces for products that handle real money. I have hands-on experience with critical KYC and payment flows. I've led a team of 7 developers and I use AI to speed up my team.",
     location: "Petrolândia, Brazil · Remote",
     localTime: "local time",
-    resume: "Download résumé",
+    resume: "Download resume",
     resumeHref: "/Tryelson-Marques-Resume.pdf",
     contact: "Let's talk",
   },

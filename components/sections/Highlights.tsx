@@ -22,7 +22,7 @@ export default function Highlights({ t }: { t: Dictionary["highlights"] }) {
   const reduce = useReducedMotion();
 
   return (
-    <section id="highlights" className="mx-auto max-w-6xl px-5 py-24 md:px-8">
+    <section id="highlights" className="mx-auto max-w-6xl px-5 pb-24 pt-12 md:px-8 md:py-24">
       <Reveal>
         <h2 className="font-display text-4xl font-bold tracking-tight text-fg md:text-5xl">{t.title}</h2>
         <p className="mt-3 text-lg text-muted">{t.subtitle}</p>

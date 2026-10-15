@@ -31,7 +31,7 @@ portfolio/
 │   ├── background/   # Animated background and cursor spotlight
 │   └── ui/           # Small reusable pieces
 ├── content/          # All copy: pt.ts, en.ts and shared types
-└── public/           # Photo, résumés (PT/EN) and project screenshots
+└── public/           # Photo, resumes (PT/EN) and project screenshots
 ```
 
 To change any text, edit `content/pt.ts` and `content/en.ts`.

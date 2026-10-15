@@ -27,15 +27,22 @@ export default function Hero({ t, photo }: { t: Dictionary["hero"]; photo: strin
   });
 
   return (
-    <section id="top" className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-5 pb-16 pt-32 md:px-8">
+    <section id="top" className="relative mx-auto flex max-w-6xl flex-col justify-center px-5 pb-8 pt-28 md:min-h-[100svh] md:px-8 md:pb-16 md:pt-32">
       <div className="grid items-center gap-12 md:grid-cols-[1.4fr_1fr]">
         <div>
-          <motion.div {...item(0)} className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-xs font-medium text-brand">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
+          <motion.div {...item(0)} className="mb-6 flex items-center gap-3">
+            {photo && (
+              <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full bg-surface-2 ring-2 ring-brand/40 ring-offset-2 ring-offset-ink md:hidden">
+                <Image src={photo} alt="Tryelson Marques" fill priority sizes="64px" className="object-cover" />
+              </span>
+            )}
+            <span className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-xs font-medium text-brand">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
+              </span>
+              {t.available}
             </span>
-            {t.available}
           </motion.div>
 
           <motion.p {...item(0.08)} className="text-lg text-muted">
@@ -111,13 +118,13 @@ export default function Hero({ t, photo }: { t: Dictionary["hero"]; photo: strin
           initial={reduce ? false : { opacity: 0, scale: 0.85, rotate: -4 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 1, delay: 0.2, ease }}
-          className="relative mx-auto aspect-square w-64 sm:w-72 md:w-full md:max-w-[22rem]"
+          className="relative mx-auto hidden aspect-square w-full max-w-[22rem] md:block"
         >
           <div className="absolute -inset-6 rounded-full bg-linear-to-tr from-brand/40 via-brand-2/20 to-brand-3/40 blur-3xl" />
           <div className="ring-spin absolute -inset-[3px] rounded-[2.5rem]" />
           <div className="relative h-full w-full overflow-hidden rounded-[2.4rem] bg-surface-2">
             {photo ? (
-              <Image src={photo} alt="Tryelson Marques" fill priority sizes="(min-width: 768px) 352px, 288px" className="object-cover" />
+              <Image src={photo} alt="Tryelson Marques" fill priority sizes="352px" className="object-cover" />
             ) : (
               <div className="flex h-full w-full items-center justify-center bg-linear-to-br from-surface-2 to-ink font-display text-7xl font-extrabold text-gradient">
                 TM
